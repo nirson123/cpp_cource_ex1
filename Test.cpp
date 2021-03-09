@@ -53,8 +53,7 @@ TEST_CASE("code with wrong digits"){
     CHECK_THROWS(snowman(15111111));
     CHECK_THROWS(snowman(51111111));
 
-    CHECK_THROWS(snowman(22202222)); // 0 is not a valid digit
-    CHECK_THROWS(snowman(00000000));
+    CHECK_THROWS(snowman(00000000)); // 0 is not a valid digit
 }
 TEST_CASE("negative numbers"){
 
@@ -63,5 +62,4 @@ TEST_CASE("negative numbers"){
     CHECK_THROWS(snowman(-1234)); // wrong length , and negative
 
     CHECK_THROWS(snowman(-12341235)); // wrong digit , and negative
-
 }
