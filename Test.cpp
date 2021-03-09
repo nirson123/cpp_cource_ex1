@@ -53,6 +53,16 @@ TEST_CASE("code with wrong digits"){
     CHECK_THROWS(snowman(15111111));
     CHECK_THROWS(snowman(51111111));
 
+    //check zero in every position
+    CHECK_THROWS(snowman(11111110));
+    CHECK_THROWS(snowman(11111101));
+    CHECK_THROWS(snowman(11111011));
+    CHECK_THROWS(snowman(11110111));
+    CHECK_THROWS(snowman(11101111));
+    CHECK_THROWS(snowman(11011111));
+    CHECK_THROWS(snowman(10111111));
+    CHECK_THROWS(snowman(01111111));
+
     CHECK_THROWS(snowman(00000000)); // 0 is not a valid digit
 }
 TEST_CASE("negative numbers"){
