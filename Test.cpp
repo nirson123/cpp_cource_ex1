@@ -28,14 +28,17 @@ TEST_CASE("wrong code length"){
     /*valid codes are 8 digits long*/
 
     //less digits then needed
-    CHECK_THROWS(snowman(1234123)); // 7 digits
-    CHECK_THROWS(snowman(123)); // 3 digits
-    CHECK_THROWS(snowman(1)); // 1 digit
+    CHECK_THROWS(snowman(1234123));
+    CHECK_THROWS(snowman(123412));
+    CHECK_THROWS(snowman(12341));
+    CHECK_THROWS(snowman(1234));
+    CHECK_THROWS(snowman(123));
+    CHECK_THROWS(snowman(12));
+    CHECK_THROWS(snowman(1));
 
     //more digits then needed
     CHECK_THROWS(snowman(123412341)); // 9 digits
     CHECK_THROWS(snowman(12341234123412)); // 10 digits
-    CHECK_THROWS(snowman(12334123412341234)); // 16 digits , bigger then long max value
 }
 TEST_CASE("code with wrong digits"){
     /* the code should only have the digits 1,2,3,4 */
@@ -52,8 +55,6 @@ TEST_CASE("code with wrong digits"){
 
     CHECK_THROWS(snowman(22202222)); // 0 is not a valid digit
     CHECK_THROWS(snowman(00000000));
-
-    CHECK_THROWS(snowman(6789)); // wrong digits and wrong length
 }
 TEST_CASE("negative numbers"){
 
