@@ -2,5 +2,5 @@
 
 #include <string>
 namespace ariel {
-    std::string snowman(long code);
+    std::string snowman(int code);
 }
